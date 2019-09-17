@@ -1,4 +1,4 @@
-alert('Connected main js file');
+
 
 // ****************************************
 // Home Page
