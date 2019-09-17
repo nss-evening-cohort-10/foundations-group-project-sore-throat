@@ -1,10 +1,12 @@
 body {
     background-color: #292929;
-    color: #ff0078;
+    color: white;
+    font-family: 'Roboto', sans-serif;
 }
 
 h1, h2{
-    font-family: "Permanent Marker";
+    font-family: "Permanent Marker", cursive;
+    color: #ff0078;
 }
 
 /* ****************************************
@@ -19,10 +21,50 @@ Home Page
 /* *****************************************
 Bio Page
 ***************************************** */
+.wrapper {
+    padding-top: 2em;
+}
 
+// Extra small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
 
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
 
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
 
+.wrapper {
+    width: 95%;
+    margin: auto;
+    justify-content: center;
+}
+
+#bioBandPic {
+    max-width: 100%;
+    height: auto;
+}
+
+#aboutText {
+    max-width: 100%;
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+.wrapper {
+    width: 90%;
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+
+.wrapper {
+    width: 100%;
+    justify-content: space-around;
+    align-content: center;
+}
 
 
 /* *****************************************
