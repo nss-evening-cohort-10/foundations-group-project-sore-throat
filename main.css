@@ -14,6 +14,7 @@ Home Page
 **************************************** */
 .navbar {
     background-color: #313131;
+    
 }
 .nav-link {
     font-family: 'Permanent Marker', cursive;
@@ -48,11 +49,6 @@ footer {
 
 .icon-div{
     width: 50%;
-}
-.container {
-    margin: 0 0;
-    display: flex;
-    justify-content: center;
 }
 /* *****************************************
 Bio Page
