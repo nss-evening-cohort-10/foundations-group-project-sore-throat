@@ -109,5 +109,7 @@ form {
 #news-button {
     background-color: #ff0078;
     width: 14em;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Permanent Marker", cursive;
+    border: silver 1px solid;
+
 }
