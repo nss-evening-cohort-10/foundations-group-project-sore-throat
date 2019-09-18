@@ -30,7 +30,13 @@ Home Page
     color:white;
 }
 
-
+.navbar .navbar-brand {
+    font-family: 'Permanent Marker', cursive;
+    color: #ff0078;
+}
+.navbar .navbar-brand:hover {
+    color: white;
+}
 
 /* *****************************************
 Bio Page
