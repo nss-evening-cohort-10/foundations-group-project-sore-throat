@@ -4,7 +4,7 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-h1, h2{
+h1, h2, h5{
     font-family: "Permanent Marker", cursive;
     color: #ff0078;
 }
@@ -23,6 +23,11 @@ Bio Page
 ***************************************** */
 .wrapper {
     padding-top: 2em;
+}
+
+.card {
+    background-color: #313131;
+    box-shadow: 5px 5px 5px black;
 }
 
 // Extra small devices (portrait phones, less than 576px)
