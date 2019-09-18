@@ -22,7 +22,9 @@
 // Merchandise Page
 // *****************************************
 
-
+document.getElementById("dropdownMenu2").addEventListener(click,(event) =>{
+console.log(event)
+});
 
 
 

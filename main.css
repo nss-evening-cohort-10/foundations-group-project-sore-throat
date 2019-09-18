@@ -94,7 +94,24 @@ Merchandise Page
     text-align: center;
 }
 
-
+#dropdownMenu2 {
+    font-family: Roboto;
+    color: #ff0078;
+    border-color: #ff0078;
+    background-color: #313131;
+}
+.dropdown-menu{
+    border-color: #bd14db;
+    background-color:  #ff0078;
+}
+button.dropdown-item{
+    font-family: Roboto;
+    color: #ffffff;  
+    border-color: #bd14db;
+}
+.btn-secondary{
+    border-color: #ff0078;
+}
 
 
 
