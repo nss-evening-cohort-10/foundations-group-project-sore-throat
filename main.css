@@ -4,7 +4,7 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-h1, h2{
+h1, h2, h5{
     font-family: "Permanent Marker", cursive;
     color: #ff0078;
 }
@@ -61,6 +61,21 @@ Bio Page
     padding-top: 2em;
 }
 
+.card {
+    background-color: #313131;
+    box-shadow: 5px 5px 5px black;
+    height: 350px;
+    padding: 0;
+    border-radius: 0px;
+}
+
+.card img {
+    height: 150px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 // Extra small devices (portrait phones, less than 576px)
 // No media query for `xs` since this is the default in Bootstrap
 
@@ -84,6 +99,10 @@ Bio Page
 #aboutText {
     max-width: 100%;
 
+}
+
+#memberCardHolder {
+    width: 100%;
 }
 
 // Large devices (desktops, 992px and up)
