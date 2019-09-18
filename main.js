@@ -1,4 +1,6 @@
-
+const printToDom = (divId, toPrint) => {
+    document.getElementById(divId).innerHTML += toPrint;
+};
 
 // ****************************************
 // Home Page
@@ -40,17 +42,14 @@ const bandMemberArr = [
     },
 ]
 
-const printToDom = (divId, toPrint) => {
-    document.getElementById(divId).innerHTML += toPrint;
-};
-
-const cardPrinter = (arr) => {
+const bandMemberPrinter = (arr) => {
     let domString = '';
     for (let i = 0; i < arr.length; i++) {
         const thisObject = arr[i];
         domString +=
         `
-        <div class="card col-3">
+        <div class="col-3">
+            <div class="card">
             <img src="${thisObject.memberImg}" class="card-img-top img-fluid max-width: 100%" alt="...">
             <div class="card-body">
                 <h5 class="card-title">${thisObject.memberName}</h5>
@@ -58,13 +57,14 @@ const cardPrinter = (arr) => {
                 <p class="card-text">${thisObject.memberJoinDate}</p>
                 <a href="#" class="btn btn-secondary">About Me</a>
             </div>
+            </div>
         </div>
         `
     }
     printToDom('bandMemberCardHolder', domString);
 };
 
-cardPrinter(bandMemberArr);
+bandMemberPrinter(bandMemberArr);
 
 // *****************************************
 // Merchandise Page
