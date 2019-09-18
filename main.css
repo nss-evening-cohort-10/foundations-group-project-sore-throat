@@ -106,3 +106,30 @@ Newsletter Page
     text-align: center;
 
 }
+
+form {
+    display: flex;
+    justify-content: center;
+}
+
+.form-control {
+    width: 18em;
+    margin-top: 4em;
+    margin-right: 2em;
+    font-family: 'Roboto', sans-serif;
+}
+
+#news-button-div {
+    display: flex;
+    justify-content: center;
+    margin-top: 3em;
+
+}
+
+#news-button {
+    background-color: #ff0078;
+    width: 14em;
+    font-family: "Permanent Marker", cursive;
+    border: silver 1px solid;
+
+}
