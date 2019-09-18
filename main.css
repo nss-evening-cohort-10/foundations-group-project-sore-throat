@@ -64,6 +64,28 @@ Bio Page
     background-color: #ff0078;
 }
 
+#horizontalLineDiv {
+    background-color: white;
+    border: 1px solid white;
+}
+
+.timelineCard h3 {
+    font-family: "Permanent Marker", cursive;
+    color: black;
+    background-color: #ff0078;
+}
+
+
+.timelineCard::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
 // Extra small devices (portrait phones, less than 576px)
 // No media query for `xs` since this is the default in Bootstrap
 
