@@ -37,7 +37,23 @@ Home Page
 .navbar .navbar-brand:hover {
     color: white;
 }
+footer {
+    background-color: #ff0078;
+    width: 100%;
+}
+.fab {
+    font-size: 65px;
+    color: #313131;
+}
 
+.icon-div{
+    width: 50%;
+}
+.container {
+    margin: 0 0;
+    display: flex;
+    justify-content: center;
+}
 /* *****************************************
 Bio Page
 ***************************************** */
