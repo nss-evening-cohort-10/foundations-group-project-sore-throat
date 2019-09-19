@@ -81,3 +81,18 @@ console.log(event)
 // *****************************************
 // Newsletter Page
 // *****************************************
+
+
+
+
+const init = () => {
+    if(document.URL.includes('merchandise')) {
+        productBuilder(SoreThroatProducts);
+    } else if(document.URL.includes('bio')) {
+      bandMemberPrinter(bandMemberArr);
+    } else if (document.URL.includes('news')) {
+      writeCards(newsCards);
+    }
+  };
+
+  init();
