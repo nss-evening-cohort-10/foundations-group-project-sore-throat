@@ -5,7 +5,35 @@ const printToDom = (divId, toPrint) => {
 // ****************************************
 // Home Page
 // ****************************************
+const tourDates = [
+    {Location: 'GRAND OLE OPRY- NASHVILLE, TN',
+    Date: '09/28/2019'},
+    {Location: 'MERCEDES BENZ STADIUM- ATLANTA, GA',
+    Date: '10/04/2019'},
+    {Location: 'BASS CONCERT HALL- AUSTIN, TX',
+    Date: '10/10/2019' },
+    {Location: 'RED ROCKS AMPHITHEATRE- MORRISON, CO',
+    Date: '10/17/2019'},
+    {Location: 'HOLLYWOOD BOWL- LOS ANGELES, CA',
+    Date: '10/28/2019'},
+    {Location: 'CENTURYLINK FIELD- SEATTLE, WA',
+    Date: '11/05/2019'},
+    {Location: 'RADIO CITY MUSIC HALL- NEW YORK, NY',
+    Date: '11/13/2019'},
+    {Location: 'FENWAY PARK- BOSTON, MA',
+    Date: '11/24/2019'} 
+];
 
+const printTourDates = (datesArray) => {
+    let domString = ``
+    for (i = 0; i < datesArray.length; i++) {
+        let concert = datesArray[i]
+        domString += `
+        <p>${concert.Location} ${concert.Date} <button class='btn'>Buy Tickets</button></p>
+        `
+    } printToDom('dates-holder', domString);
+};
+printTourDates(tourDates);
 
 
 
@@ -64,15 +92,15 @@ const bandMemberPrinter = (arr) => {
     printToDom('bandMemberCardHolder', domString);
 };
 
-bandMemberPrinter(bandMemberArr);
+//bandMemberPrinter(bandMemberArr);
 
 // *****************************************
 // Merchandise Page
 // *****************************************
 
-document.getElementById("dropdownMenu2").addEventListener(click,(event) =>{
-console.log(event)
-});
+//document.getElementById("dropdownMenu2").addEventListener(click,(event) =>{
+//console.log(event)
+//});
 
 
 
@@ -81,3 +109,15 @@ console.log(event)
 // *****************************************
 // Newsletter Page
 // *****************************************
+
+const init = () => {
+    if(document.URL.includes('merchandise')){
+        productBuilder(SoreThroatProducts);
+    } else if(document.URL.includes('bio')){
+      cbandMemberPrinter(bandMemberArr);
+    } else if(document.URL.includes('index')) {
+        printTourDates(tourDates);
+    };
+  };
+
+  init();
