@@ -79,6 +79,8 @@ Bio Page
 #horizontalLineDiv {
     background-color: white;
     border: 1px solid white;
+    margin-left: 2em;
+    margin-right: 2em;
 }
 
 .timelineCard h3 {
@@ -89,14 +91,23 @@ Bio Page
 
 
 .timelineCard::after {
-    content: '';
+    content: ' ';
     position: absolute;
-    top: 100%;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-style: solid;
+    border-width: 8px; 
+    background-color: #ff0078;
+    top: 350px;
+    height: 50px;
+    width: 2px;
+    left: 50%;
 }
+
+.fa-star {
+    position: absolute;
+    top: 390px;
+    left: 47%;
+    z-index: 2;
+}
+
 
 // Extra small devices (portrait phones, less than 576px)
 // No media query for `xs` since this is the default in Bootstrap
