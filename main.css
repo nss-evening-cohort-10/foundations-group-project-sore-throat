@@ -64,6 +64,10 @@ Bio Page
     padding: 0;
     border-radius: 0px;
 }
+.card-body {
+    padding: 0;
+    margin-left: 10px;
+}
 
 .card img {
     height: 150px;
@@ -83,19 +87,32 @@ Bio Page
     margin-right: 2em;
 }
 
-.timelineCard h3 {
+.timelineCardHead {
     font-family: "Permanent Marker", cursive;
     color: black;
     background-color: #ff0078;
+    padding: 10px;
+    margin-left: 0;
 }
 
 
-.timelineCard::after {
+.timelineCardA::after {
     content: ' ';
     position: absolute;
     border-width: 8px; 
     background-color: #ff0078;
     top: 350px;
+    height: 50px;
+    width: 2px;
+    left: 50%;
+}
+
+.timelineCardB::before {
+    content: ' ';
+    position: absolute;
+    border-width: 8px; 
+    background-color: #ff0078;
+    top: -48px;
     height: 50px;
     width: 2px;
     left: 50%;
