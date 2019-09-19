@@ -70,6 +70,9 @@ Bio Page
 }
 .card-body {
     padding: 0;
+    
+}
+.card-body p {
     margin-left: 10px;
 }
 
@@ -122,11 +125,27 @@ Bio Page
     left: 50%;
 }
 
-.fa-star {
+#hiddenCard1 {
+    visibility: hidden;
+}
+
+#secondRowLastCard {
+    margin-right: 30px;
+    margin-left: auto;
+}
+
+.first-row-star {
     position: absolute;
     top: 390px;
     left: 47%;
     z-index: 2;
+}
+
+.second-row-star {
+    position: absolute;
+    top: -55px;
+    z-index: 2;
+    left: 47%;
 }
 
 
