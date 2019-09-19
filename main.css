@@ -50,6 +50,10 @@ footer {
 .icon-div{
     width: 50%;
 }
+
+.main-photo {
+    width: 100%;
+}
 /* *****************************************
 Bio Page
 ***************************************** */
@@ -184,6 +188,8 @@ Merchandise Page
 #dropdownMenu2 {
     font-family: Roboto;
     color: #ff0078;
+ 
+
     border-color: #ff0078;
     background-color: #313131;
 }
@@ -194,6 +200,7 @@ Merchandise Page
 button.dropdown-item{
     font-family: Roboto;
     color: #ffffff;  
+
     border-color: #bd14db;
 }
 .btn-secondary{
@@ -230,10 +237,65 @@ form {
 
 }
 
-#news-button {
+#news-submit-button {
     background-color: #ff0078;
     width: 14em;
     font-family: "Permanent Marker", cursive;
     border: silver 1px solid;
 
 }
+
+#news-card {
+    width: 12em;
+    
+} 
+
+#news-card-div {
+    margin-top: 6em;
+    justify-content: space-evenly;
+}
+
+#news-card-date {
+    color: #BDBDBD;
+    text-align: center;
+    background-color: #7B1FA2;
+    font-family: 'Permanent marker';
+    margin: 0;
+    text-decoration: underline;
+    padding-top: .25em;
+
+}
+
+#news-card-title {
+    color: #ff0078;
+    text-align: center;
+    background-color: #7B1FA2;
+    font-family: 'Permanent marker';
+    font-size: smaller;
+    padding: .5em;
+    
+
+}
+
+#news-card-info {
+    color: #BDBDBD;
+    font-family: Roboto;
+    font-size: small;
+    margin: 2em;
+    padding: 1em;
+}
+
+#news-card-link {
+    background-color: #343A40;
+    border: none;
+    color: #bd14db;
+    text-decoration: underline;
+    font-family: 'Permanent marker';
+}
+
+#cardBox {
+    margin-bottom: 3em;
+}
+
+
+
