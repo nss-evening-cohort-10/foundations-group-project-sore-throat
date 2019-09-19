@@ -64,7 +64,6 @@ const bandMemberPrinter = (arr) => {
     printToDom('bandMemberCardHolder', domString);
 };
 
-bandMemberPrinter(bandMemberArr);
 
 // *****************************************
 // Merchandise Page
@@ -75,9 +74,9 @@ bandMemberPrinter(bandMemberArr);
 // console.log(event)
 // });
 
-document.getElementById("dropdownMenu2").addEventListener(click,(event) =>{
-console.log(event)
-});
+// document.getElementById("dropdownMenu2").addEventListener(click,(event) =>{
+// console.log(event)
+// });
 
 
 
@@ -87,6 +86,11 @@ console.log(event)
 // *****************************************
 // Newsletter Page
 // *****************************************
+
+
+
+
+
 const newsCards = [{
     date: 'June 25, 2019',
     title: 'World Tour Kickoff!',
@@ -153,4 +157,14 @@ const writeCards = (cardArray) => {
     printToDomSpecial('news-card-div', cardString)
 }
 
-writeCards(newsCards)
+
+//need to add additional page functions into the init function to be called on appropriate pages//
+const init = () => {
+    if(document.URL.includes('bio')) {
+      bandMemberPrinter(bandMemberArr);
+    } else if(document.URL.includes('news')) {
+      writeCards(newsCards);
+    };
+  };
+
+  init();
