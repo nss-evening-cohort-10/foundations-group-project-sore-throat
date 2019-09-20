@@ -54,6 +54,17 @@ footer {
 .main-photo {
     width: 100%;
 }
+.location {
+    font-family: 'Roboto', sans-serif;
+    color: #ff0078;
+}
+.date {
+    font-family: 'Roboto', sans-serif;
+    color: #bd14db;
+}
+.tick-btn {
+    background-color: #bd14db;
+}
 /* *****************************************
 Bio Page
 ***************************************** */

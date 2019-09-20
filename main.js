@@ -6,21 +6,29 @@ const printToDom = (divId, toPrint) => {
 // Home Page
 // ****************************************
 const tourDates = [
-    {Location: 'GRAND OLE OPRY- NASHVILLE, TN',
+    {Venue: 'GRAND OLE OPRY',
+    Location: 'NASHVILLE, TN',
     Date: '09/28/2019'},
-    {Location: 'MERCEDES BENZ STADIUM- ATLANTA, GA',
+    {Venue:'MERCEDES BENZ STADIUM',
+    Location: 'ATLANTA, GA',
     Date: '10/04/2019'},
-    {Location: 'BASS CONCERT HALL- AUSTIN, TX',
+    {Venue: 'BASS CONCERT HALL',
+    Location: 'AUSTIN, TX',
     Date: '10/10/2019' },
-    {Location: 'RED ROCKS AMPHITHEATRE- MORRISON, CO',
+    {Venue: 'RED ROCKS AMPHITHEATRE',
+    Location: 'MORRISON, CO',
     Date: '10/17/2019'},
-    {Location: 'HOLLYWOOD BOWL- LOS ANGELES, CA',
+    {Venue: 'HOLLYWOOD BOWL',
+    Location: 'LOS ANGELES, CA',
     Date: '10/28/2019'},
-    {Location: 'CENTURYLINK FIELD- SEATTLE, WA',
+    {Venue: 'CENTURYLINK FIELD',
+    Location: 'SEATTLE, WA',
     Date: '11/05/2019'},
-    {Location: 'RADIO CITY MUSIC HALL- NEW YORK, NY',
+    {Venue: 'RADIO CITY MUSIC HALL',
+    Location: 'NEW YORK, NY',
     Date: '11/13/2019'},
-    {Location: 'FENWAY PARK- BOSTON, MA',
+    {Venue: 'FENWAY PARK',
+    Location: 'BOSTON, MA',
     Date: '11/24/2019'} 
 ];
 
@@ -29,11 +37,24 @@ const printTourDates = (datesArray) => {
     for (i = 0; i < datesArray.length; i++) {
         let concert = datesArray[i]
         domString += `
-        <p>${concert.Location} ${concert.Date} <button class='btn'>Buy Tickets</button></p>
+        <p><div class="row ">
+        <div class="col-3 location">
+        ${concert.Venue}
+        </div>
+        <div class="col-3 location">
+        ${concert.Location}
+        </div>
+        <div class="col-2 date">
+        ${concert.Date}
+        </div>
+        <div class="col-4">
+        <button class='btn tick-btn'>Buy Tickets</button>
+        </div>
+        </div></p>
         `
     } printToDom('dates-holder', domString);
 };
-printTourDates(tourDates);
+//printTourDates(tourDates);
 
 
 
@@ -98,13 +119,13 @@ const bandMemberPrinter = (arr) => {
 // *****************************************
 
 
-// document.getElementById("dropdownMenu2").addEventListener(click,(event) =>{
-// console.log(event)
-// });
+ //document.getElementById("dropdownMenu2").addEventListener(click,(event) =>{
+ //console.log(event)
+ //});
 
-// document.getElementById("dropdownMenu2").addEventListener(click,(event) =>{
-// console.log(event)
-// });
+ //document.getElementById("dropdownMenu2").addEventListener(click,(event) =>{
+ //console.log(event)
+ //});
 
 
 
@@ -195,5 +216,6 @@ const init = () => {
         printTourDates(tourDates);
     } else if(document.URL.includes('news')) {
             writeCards(newsCards);
-
+    }
+}
   init();
