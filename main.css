@@ -68,6 +68,13 @@ Bio Page
     padding: 0;
     border-radius: 0px;
 }
+.card-body {
+    padding: 0;
+    
+}
+.card-body p, .card-body h5, .card-body a {
+    margin-left: 10px;
+}
 
 .card img {
     height: 150px;
@@ -76,6 +83,75 @@ Bio Page
     padding: 0;
 }
 
+.btn-secondary:hover {
+    background-color: #ff0078;
+}
+
+#horizontalLineDiv {
+    background-color: white;
+    border: 1px solid white;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+.timelineCardHead {
+    font-family: "Permanent Marker", cursive;
+    color: black;
+    background-color: #ff0078;
+    padding: 10px;
+    margin-left: 0;
+}
+
+.timelineCardA, .timelineCardB {
+    height: 150px;
+}
+
+.timelineCardA::after {
+    content: ' ';
+    position: absolute;
+    border-width: 8px; 
+    background-color: #ff0078;
+    top: 150px;
+    height: 50px;
+    width: 2px;
+    left: 50%;
+}
+
+.timelineCardB::before {
+    content: ' ';
+    position: absolute;
+    border-width: 8px; 
+    background-color: #ff0078;
+    top: -48px;
+    height: 50px;
+    width: 2px;
+    left: 50%;
+}
+
+#hiddenCard1 {
+    visibility: hidden;
+}
+
+#secondRowLastCard {
+    margin-right: 30px;
+    margin-left: auto;
+}
+
+.first-row-star {
+    position: absolute;
+    top: 190px;
+    left: 47%;
+    z-index: 2;
+}
+
+.second-row-star {
+    position: absolute;
+    top: -55px;
+    z-index: 2;
+    left: 47%;
+}
+
+
 // Extra small devices (portrait phones, less than 576px)
 // No media query for `xs` since this is the default in Bootstrap
 
@@ -83,42 +159,44 @@ Bio Page
 @media (min-width: 576px) { ... }
 
 // Medium devices (tablets, 768px and up)
-@media (min-width: 768px) { ... }
+@media (min-width: 768px) { 
 
-.wrapper {
-    width: 95%;
-    margin: auto;
-    justify-content: center;
-}
+    .wrapper {
+        width: 95%;
+        margin: auto;
+        justify-content: center;
+    }
 
-#bioBandPic {
-    max-width: 100%;
-    height: auto;
-}
+    #bioBandPic {
+        max-width: 100%;
+        height: auto;
+    }
 
-#aboutText {
-    max-width: 100%;
+    #aboutText {
+        max-width: 100%;
 
-}
+    }
 
-#memberCardHolder {
-    width: 100%;
+    #memberCardHolder {
+        width: 100%;
+    }
 }
 
 // Large devices (desktops, 992px and up)
-@media (min-width: 992px) { ... }
+@media (min-width: 992px) {
 
-.wrapper {
-    width: 90%;
+    .wrapper {
+        width: 90%;
+    }
 }
-
 // Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... }
+@media (min-width: 1200px) {
 
-.wrapper {
-    width: 100%;
-    justify-content: space-around;
-    align-content: center;
+    .wrapper {
+        width: 100%;
+        justify-content: space-around;
+        align-content: center;
+    }
 }
 
 
