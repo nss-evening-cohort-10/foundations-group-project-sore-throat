@@ -72,7 +72,7 @@ Bio Page
     padding: 0;
     
 }
-.card-body p {
+.card-body p, .card-body h5, .card-body a {
     margin-left: 10px;
 }
 
@@ -102,13 +102,16 @@ Bio Page
     margin-left: 0;
 }
 
+.timelineCardA, .timelineCardB {
+    height: 150px;
+}
 
 .timelineCardA::after {
     content: ' ';
     position: absolute;
     border-width: 8px; 
     background-color: #ff0078;
-    top: 350px;
+    top: 150px;
     height: 50px;
     width: 2px;
     left: 50%;
@@ -136,7 +139,7 @@ Bio Page
 
 .first-row-star {
     position: absolute;
-    top: 390px;
+    top: 190px;
     left: 47%;
     z-index: 2;
 }
