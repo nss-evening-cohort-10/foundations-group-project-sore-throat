@@ -211,7 +211,7 @@ const init = () => {
     if(document.URL.includes('merchandise')){
         productBuilder(SoreThroatProducts);
     } else if(document.URL.includes('bio')){
-      cbandMemberPrinter(bandMemberArr);
+      bandMemberPrinter(bandMemberArr);
     } else if(document.URL.includes('index')) {
         printTourDates(tourDates);
     } else if(document.URL.includes('news')) {
