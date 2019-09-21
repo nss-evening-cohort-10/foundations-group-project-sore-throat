@@ -288,9 +288,10 @@ const SoreThroatProducts = [
                 }
             merchPrintToDom('productCardSection', domString)
         };
+    
         
    
-
+const merchListener = () => {
 document.getElementById('merchProdId').addEventListener('click', (e) =>{
     const productValue = e.target.value;
     
@@ -307,7 +308,7 @@ document.getElementById('merchProdId').addEventListener('click', (e) =>{
     
     productBuilder(selectedProducts)
 });
-
+};
 
 // *****************************************
 // Newsletter Page
@@ -445,6 +446,8 @@ const init = () => {
         printTourDates(tourDates);
     } else if(document.URL.includes('news')) {
             writeCards(newsCards);
+    } else if(document.URL.includes('merchandise')) {
+        merchListener();
     }
 }
   init();
