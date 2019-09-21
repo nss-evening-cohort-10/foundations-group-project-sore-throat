@@ -42,7 +42,7 @@ footer {
     background-color: #ff0078;
     width: 100%;
 }
-.fab {
+.fa-instagram, .fa-youtube, .fa-twitter-square, .fa-facebook-square {
     font-size: 65px;
     color: #313131;
 }
@@ -64,6 +64,14 @@ footer {
 }
 .tick-btn {
     background-color: #bd14db;
+}
+.album1, .album2 {
+    width: 200px;
+    height: 200px;
+}
+.fa-spotify {
+    font-size: 65px;
+    color: #84bd00;
 }
 /* *****************************************
 Bio Page
