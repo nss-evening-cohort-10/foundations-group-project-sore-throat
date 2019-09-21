@@ -234,6 +234,10 @@ Bio Page
     }
 }
 
+#memberCardHolder {
+    width: 100%;
+}
+
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
 
@@ -255,18 +259,25 @@ Bio Page
 /* *****************************************
 Merchandise Page
 ***************************************** */
-.merchPageTitle{
-    text-align: center;
-}
+
 
 #dropdownMenu2 {
     font-family: Roboto;
-    color: #ff0078;
- 
-
+    color: #bd14db;
     border-color: #ff0078;
     background-color: #313131;
 }
+
+.merchPageTitle{
+    text-align: center;
+    
+}
+
+.merchcard{
+    font-family: Roboto;
+    color: #bd14db;
+}
+
 .dropdown-menu{
     border-color: #bd14db;
     background-color:  #ff0078;
@@ -281,7 +292,9 @@ button.dropdown-item{
     border-color: #ff0078;
 }
 
-
+.btn-primary {
+    background-color: #ff0078;
+}
 
 
 /* *****************************************
