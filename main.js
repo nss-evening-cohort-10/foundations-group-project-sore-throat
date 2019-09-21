@@ -144,13 +144,17 @@ const newsCards = [{
     title: 'World Tour Kickoff!',
     info: "Sore Throat kicks off their world tour in Boston with amazing opening act \
         'The Violent Phlegms'.  Check it out!",
-    link: 'Read More'
+    link: 'Read More',
+    story: 'Sore Throat embarks on their 23rd world tour with a rocking debut in Boston. \
+        THe tour will be 9 months and hit all 7 concerts.  Sore Throat is thrilled to be \
+        performing for their fans all over the world!'
 },
 {
     date: 'May 12, 2019',
     title: 'New album!',
     info: "Check out our newest album--'Hack up a lung'! We feel it is our best yet!",
-    link: 'Read More'
+    link: 'Read More',
+    story: ''
 },
 {
     date: 'March 23, 2019',
@@ -192,10 +196,10 @@ const writeCards = (cardArray) => {
         let cards = cardArray[i];
         cardString += `
         <div class="card-wrapper" id="flip-card">
-          <div id="flip-card-inner" class="card card-rotating text-center">
+          <div id="flip-card-inner" class="card card-rotating text-center no-border">
 
             <div class="face-front" id="flip-card-front">
-                <div id="cardBox" class="col-sm-4">   
+                <div id="cardBox" class="no-pad col-sm-4">   
                     <div class="card text-white bg-dark mb-3" id="news-card" >
                         <h5 class="card-title" id="news-card-date">${cards.date}</h5>
                         <h6 id="news-card-title">${cards.title}</h6>

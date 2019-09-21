@@ -377,3 +377,11 @@ form {
   #card-back-info {
       padding: 2em;
   }
+
+  .no-pad{
+    padding: 0px;
+  }
+
+  .no-border {
+      border: none;
+  }
