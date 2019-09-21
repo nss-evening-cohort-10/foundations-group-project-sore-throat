@@ -183,7 +183,8 @@ const albumPrinter = (arr) => {
 
 
 
-const discoButtonListener = document.getElementById('discography').addEventListener('click', (e) => {
+const discoButtonListener = () => {
+        document.getElementById('discography').addEventListener('click', (e) => {
         //when i click the button the following should happen:
 
         //1. the current content should be hidden
@@ -195,6 +196,7 @@ const discoButtonListener = document.getElementById('discography').addEventListe
 
         //4. then when the button is clicked again, hide albums and unhide the members and timeline sections.
     });
+};
 
 
 // *****************************************
@@ -295,6 +297,7 @@ const init = () => {
         productBuilder(SoreThroatProducts);
     } else if(document.URL.includes('bio')){
       bandMemberPrinter(bandMemberArr);
+      discoButtonListener();
     } else if(document.URL.includes('index')) {
         printTourDates(tourDates);
     } else if(document.URL.includes('news')) {
