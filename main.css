@@ -80,22 +80,22 @@ Bio Page
     padding-top: 2em;
 }
 
-.card {
+.bioCard {
     background-color: #313131;
     box-shadow: 5px 5px 5px black;
     height: 350px;
     padding: 0;
     border-radius: 0px;
 }
-.card-body {
+.bioCard-body {
     padding: 0;
     
 }
-.card-body p, .card-body h5, .card-body a {
+.bioCard-body p, .bioCard-body h5, .bioCard-body a {
     margin-left: 10px;
 }
 
-.card img {
+.bioCard img {
     height: 150px;
     width: 100%;
     margin: 0;
