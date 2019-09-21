@@ -98,9 +98,9 @@ const bandMemberPrinter = (arr) => {
         domString +=
         `
         <div class="col-3">
-            <div class="card">
+            <div class="card bioCard">
             <img src="${thisObject.memberImg}" class="card-img-top img-fluid max-width: 100%" alt="...">
-            <div class="card-body">
+            <div class="card-body bioCard-body">
                 <h5 class="card-title">${thisObject.memberName}</h5>
                 <p class="card-text">${thisObject.memberRole}</p>
                 <p class="card-text">${thisObject.memberJoinDate}</p>
@@ -155,13 +155,13 @@ const albumPrinter = (arr) => {
         const thisObject = arr[i];
         domString +=
         `        
-        <div class="card albumCard">
+        <div class="bioCard albumCard">
         <div class="row">
             <div class="col-4">
             <img src="${thisObject.albumImage}" class="img-thumbnail">
             </div>
             <div class="col-8">
-            <div class="card-body">
+            <div class="bioCard-body">
                 <h5 class="card-title">${thisObject.albumName}</h5>
                 <ol class="card-text">
                 `
