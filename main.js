@@ -170,7 +170,9 @@ const SoreThroatProducts = [
     }, 
     ]
 
-
+    const merchPrintToDom = (divId, toPrint) => {
+        document.getElementById(divId).innerHTML = toPrint;
+    };
 
     const productBuilder = (prodArrays) => {
         const prodCardSectDiv = document.getElementById('productCardSection');
@@ -192,7 +194,7 @@ const SoreThroatProducts = [
                     </div>
                     `;
                 }
-          printToDom('productCardSection', domString)
+            merchPrintToDom('productCardSection', domString)
         };
         
    
@@ -309,20 +311,6 @@ const writeCards = (cardArray) => {
     printToDomSpecial('news-card-div', cardString)
 }
 
-
-//need to add additional page functions into the init function to be called on appropriate pages//
-/*const init = () => {
-     if(document.URL.includes('merchandise')){
-        productBuilder(SoreThroatProducts);
-    } else if(document.URL.includes('bio')){
-      cbandMemberPrinter(bandMemberArr);
-    } else if(document.URL.includes('index')) {
-        printTourDates(tourDates);
-    } else if(document.URL.includes('news')) {
-            writeCards(newsCards);
-    }
-}
-  init(); */
 
   const init = () => {
     if(document.URL.includes('bio')){
