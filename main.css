@@ -42,7 +42,7 @@ footer {
     background-color: #ff0078;
     width: 100%;
 }
-.fab {
+.fa-instagram, .fa-youtube, .fa-twitter-square, .fa-facebook-square {
     font-size: 65px;
     color: #313131;
 }
@@ -65,6 +65,36 @@ footer {
 .tick-btn {
     background-color: #bd14db;
 }
+.album1, .album2 {
+    width: 200px;
+    height: 200px;
+}
+.fa-spotify {
+    font-size: 65px;
+    color: #84bd00;
+}
+#logo {
+    height: 100px;
+}
+/**.overlay {position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  background-color: rgba(0,0,0,0.5);
+}
+.overlay-content {
+    overflow-y: scroll;
+}
+  
+.space {
+    background-color: #292929;
+    width: 100%;
+    height: 1001px;
+}**/
+
+
 /* *****************************************
 Bio Page
 ***************************************** */
@@ -72,22 +102,22 @@ Bio Page
     padding-top: 2em;
 }
 
-.card {
+.bioCard {
     background-color: #313131;
     box-shadow: 5px 5px 5px black;
     height: 350px;
     padding: 0;
     border-radius: 0px;
 }
-.card-body {
+.bioCard-body {
     padding: 0;
     
 }
-.card-body p, .card-body h5, .card-body a {
+.bioCard-body p, .bioCard-body h5, .bioCard-body a {
     margin-left: 10px;
 }
 
-.card img {
+.bioCard img {
     height: 150px;
     width: 100%;
     margin: 0;
@@ -162,6 +192,16 @@ Bio Page
     left: 47%;
 }
 
+#albumContainer {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+}
+.albumCard {
+    width: 500px;
+    height: auto;
+    margin: 10px;
+}
 
 // Extra small devices (portrait phones, less than 576px)
 // No media query for `xs` since this is the default in Bootstrap
@@ -287,7 +327,9 @@ form {
 }
 
 #news-card {
-    width: 12em;
+    width: 300px;
+    height: 300px;
+
     
 } 
 
@@ -338,5 +380,56 @@ form {
     margin-bottom: 3em;
 }
 
+#flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+    margin-bottom: 3em;
+  }
+  
+  #flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  #flip-card:hover #flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  #flip-card-front, #flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  
+    
+  
+  #flip-card-back {
+    
+    color: white;
+    transform: rotateY(180deg);
+  }
+  
+  #news-card-2 {
+      height: 300px;
+  }
 
+  #card-back-info {
+      padding: 2em;
+  }
 
+  .no-pad{
+    padding: 0px;
+  }
+
+  .no-border {
+      border: none;
+  }

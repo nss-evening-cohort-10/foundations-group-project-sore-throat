@@ -11,69 +11,107 @@
     <link rel="stylesheet" href="./main.css">
     <script src="https://kit.fontawesome.com/60884f7b4f.js"></script>
 </head>
+
 <body>
-    <nav class="navbar  fixed-top navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="./index.html">Sore Throat</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+
+  <nav class="navbar  fixed-top navbar-expand-lg navbar-light">
+    <a href="./index.html"><img src="./logo-image/Untitled.jpg" id="logo" class="navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
 
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./bio.html">Bio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./merchandise.html">Merchandise</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./news.html" tabindex="-1" aria-disabled="true">News</a>
-            </li>
-          </ul>
-        </div>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./bio.html">Bio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./merchandise.html">Merchandise</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./news.html" tabindex="-1" aria-disabled="true">News</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
 
-      </nav>
-      <div class="jumbotron-fluid">
-        <img class="main-photo" src="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1334&q=80">
-      </div>
-      <div class="container-fluid">
+  <div class="jumbotron-fluid">
+    <img class="main-photo" src="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1334&q=80">
+  </div>
+
+  <div class="container-fluid overlay mt-5">
+    
+    <div class="row mb-5 overlay-content">
+
+      <div class="col-3" id="releases-holder">
+
         <div class="row">
-          <div class="col-3 release holder">
+          <div class="col-3 mt-4 ml-5">
             <h1>LATEST RELEASES</h1>
           </div>
-          <div class="col-9 d-flex justify-content-center mt-4">
-              <h1>TOUR DATES</h1>
+        </div>
+
+        <div class="row mt-3 album-section">
+          <div class="col text-center">
+            <p><h6>Kleenex is My Best Friend</h6></p>
+            <p><img class="album1" src="https://i.pinimg.com/originals/28/54/ce/2854ce6a5efda39b79d43f13d16107be.jpg" alt=""></p>
+            <p><a href="https://open.spotify.com/track/7GhIk7Il098yCjg4BQjzvb"><i class="fab fa-spotify"></i></a></p>
           </div>
         </div>
-        <div class="row">
-          <div class="col-3">
-            One of three columns
-          </div>
-          <div class="col-9 text-center mb-4" id="dates-holder">
-              <div class="row text-left ml-5">
-                  <div class="col-6">
-                    <h3>LOCATION</h3>
-                  </div>
-                  <div class="col-6">
-                    <h3>DATE</h3>
-                  </div>
-                </div>
+
+        <div class="row album-section">
+          <div class="col text-center">
+            <p><h6>Cough Drop Dark Side</h6></p>
+            <p><img class="album2" src="https://scene360.com/wp-content/uploads/2014/10/computergraphics-album-covers-2014-08.jpg" alt=""></p>
+            <a href=""><i class="fab fa-spotify"></i></a>
           </div>
         </div>
       </div>
-      <footer class="container-fluid sticky-bottom d-flex justify-content-center mt-1">
-        <div class="icon-div d-flex justify-content-around">
-          <a href="https://www.facebook.com/NashvilleSoftwareSchool/"><i class="fab fa-facebook-square"></i></a>
-          <a href="https://twitter.com/NashSoftware"><i class="fab fa-twitter-square"></i></a>
-          <a href="https://www.instagram.com/nathanwpylestrangeplanet/?hl=en"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.youtube.com/channel/UCCKj04Fy5V4zAjWSIqdqScw"><i class="fab fa-youtube"></i></a>
+
+      <div class="col-9 text-center mb-4" id="dates-holder">
+
+        <div class="row">
+          <div class="col-9 d-flex justify-content-center mb-3 mt-4">
+            <h1>TOUR DATES</h1>
+          </div>
         </div>
-      </footer>
-    <script src="./main.js"></script>
+        
+        <div class="row text-left ml-5">
+          <div class="col-6">
+            <h3>LOCATION</h3>
+          </div>
+          <div class="col-6">
+            <h3>DATE</h3>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="space">
+
+  </div>
+
+
+
+
+  <footer class="container-fluid sticky-bottom d-flex justify-content-center mt-1">
+    <div class="icon-div d-flex justify-content-around">
+      <a href="https://www.facebook.com/NashvilleSoftwareSchool/"><i class="fab fa-facebook-square"></i></a>
+      <a href="https://twitter.com/NashSoftware"><i class="fab fa-twitter-square"></i></a>
+      <a href="https://www.instagram.com/nathanwpylestrangeplanet/?hl=en"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.youtube.com/channel/UCCKj04Fy5V4zAjWSIqdqScw"><i class="fab fa-youtube"></i></a>
+    </div>
+  </footer>
+
+
+  <script src="./main.js"></script>
 </body>
+
 </html>
