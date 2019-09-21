@@ -1,6 +1,9 @@
 const printToDom = (divId, toPrint) => {
     document.getElementById(divId).innerHTML += toPrint;
 };
+const printToDom2 = (divId, toPrint) => {
+    document.getElementById(divId).innerHTML = toPrint;
+};
 
 // ****************************************
 // Home Page
@@ -178,7 +181,7 @@ const albumPrinter = (arr) => {
                     </div>
                     </div>`
     }
-    printToDom('albumContainer', domString);
+    printToDom2('albumContainer', domString);
 };
 
 
@@ -188,13 +191,18 @@ const discoButtonListener = () => {
         //when i click the button the following should happen:
 
         //1. the current content should be hidden
-        memberSection.style.display = 'none';
-        timelineSec.style.display = 'none';
-        //2. the album array should print below the photo and about us section
-        albumPrinter(albumArr);
-        //3. if time change the button to display "click to view members and timeline"
-
-        //4. then when the button is clicked again, hide albums and unhide the members and timeline sections.
+        if (document.getElementById('discography').innerHTML == 'Click for Full Discography') {
+            memberSection.style.display = 'none';
+            timelineSec.style.display = 'none';
+            discoSection.style.display = 'block';
+            document.getElementById('discography').innerHTML = 'Click to Go Back To Members';
+            albumPrinter(albumArr);
+            } else if (document.getElementById('discography').innerHTML == 'Click to Go Back To Members') {
+            discoSection.style.display = 'none';
+            memberSection.style.display = 'block';
+            timelineSec.style.display = 'block';
+            document.getElementById('discography').innerHTML = 'Click for Full Discography';
+        };
     });
 };
 
