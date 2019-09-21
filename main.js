@@ -283,22 +283,22 @@ const SoreThroatProducts = [
         
    
 
-document.getElementById('merchProdId').addEventListener('click', (e) =>{
-    const productValue = e.target.value;
+// document.getElementById('merchProdId').addEventListener('click', (e) =>{
+//     const productValue = e.target.value;
     
-    const selectedProducts = [];
+//     const selectedProducts = [];
     
-    for (i = 0; i < SoreThroatProducts.length; i++){
-        const soreThroatProduct = SoreThroatProducts[i];
-        console.log(event)
-        if (soreThroatProduct.product == productValue){
-            selectedProducts.push(soreThroatProduct);
-        };
+//     for (i = 0; i < SoreThroatProducts.length; i++){
+//         const soreThroatProduct = SoreThroatProducts[i];
+//         console.log(event)
+//         if (soreThroatProduct.product == productValue){
+//             selectedProducts.push(soreThroatProduct);
+//         };
 
-    };
+//     };
     
-    productBuilder(selectedProducts)
-});
+//     productBuilder(selectedProducts)
+// });
 
 
 // *****************************************
@@ -388,6 +388,10 @@ const newsCards = [{
 const printToDomSpecial = (divId, toPrint) => {
     document.getElementById(divId).innerHTML += toPrint;
 }
+
+document.getElementById('news-submit-button').addEventListener('click', (e) => {
+    alert('You have been added to the mailing list. Not!');
+})
 
 const writeCards = (cardArray) => {
     let cardString = '';
