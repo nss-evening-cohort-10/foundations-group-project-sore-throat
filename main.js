@@ -234,7 +234,7 @@ const SoreThroatProducts = [
     {
         product: "Album",
         description: "Tha Clash London Callin",
-        detail: "London Calling is the third studio album by English rock band",
+        detail: "London Calling",
         price: "$25.00",
         productImg:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYrgRxb2JgiYgAr8Cz1_oNJ9d-PMMpnMMj2PvVWUpQH8vBqx1ug0Q",
     },
@@ -268,7 +268,7 @@ const SoreThroatProducts = [
                     domString +=`
                     <div class = "col-3 ">
                     <div class="merchcard border">
-                    <img src="${prodArray.productImg}" class="card-img-top border" alt="...">
+                    <img src="${prodArray.productImg}" class="card-img-top border" id ="merchImgCard" alt="...">
                     <div class="card-body border">
                     <h5 class="card-title border">${prodArray.product}</h5>
                     <p class="card-text border">${prodArray.description} ${prodArray.detail}</p>

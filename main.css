@@ -272,7 +272,9 @@ Merchandise Page
     text-align: center;
     
 }
-
+#merchImgCard{
+    height: 200px;
+}
 .merchcard{
     font-family: Roboto;
     color: #bd14db;
@@ -285,7 +287,6 @@ Merchandise Page
 button.dropdown-item{
     font-family: Roboto;
     color: #ffffff;  
-
     border-color: #bd14db;
 }
 .btn-secondary{
