@@ -398,10 +398,11 @@ const printToDomSpecial = (divId, toPrint) => {
     document.getElementById(divId).innerHTML += toPrint;
 }
 
+ const submitButton = () => {
     document.getElementById('news-submit-button').addEventListener('click', (e) => {
     alert('You have been added to the mailing list. Not!');
 })
-
+ }
 const writeCards = (cardArray) => {
     let cardString = '';
     for (let i = 0; i < cardArray.length; i++) {
