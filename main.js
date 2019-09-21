@@ -75,7 +75,7 @@ const bandMemberArr = [
     memberImg: "https://www.bitchmedia.org/sites/default/files/u1952/01_h.jpg",
     memberName: 'Jasmine Jamhardest',
     memberRole: 'Drummer',
-    memberJoinDate: 'January 1999'
+    memberJoinDate: 'January 1999',
     },
     {
     memberImg: "https://52f073a67e89885d8c20-b113946b17b55222ad1df26d6703a42e.ssl.cf2.rackcdn.com/TT-16_alw.jpg",
@@ -112,6 +112,89 @@ const bandMemberPrinter = (arr) => {
     }
     printToDom('bandMemberCardHolder', domString);
 };
+
+const albumArr = [
+    {
+    albumName: 'Huh? Say what?',
+    releaseDate: 'March 2010',
+    songList: ['You Can Do Better', 'Earwax', 'Smashing Drums', 'Whatever', 'Mmmmhmmmmm'],
+    albumImage: "https://f4.bcbits.com/img/0010866236_10.jpg"
+    },
+    {
+    albumName: 'Itchy & Scratchy',
+    releaseDate: 'June 2005',
+    songList: ['Tastes like cotton', 'Try That One More Time', 'Just Another Song', 'Dogs Are Howling', 'Scream On'],
+    albumImage: "https://i.etsystatic.com/5142834/r/il/72b7ad/1637278124/il_794xN.1637278124_f1o3.jpg"
+    },
+    {
+    albumName: 'Kleenex is My Best Friend',
+    releaseDate: 'July 2019',
+    songList: ['Achoooo...', 'Sniff', 'Blow That Horn', 'Puffs Sux', 'Dry it Up!'],
+    albumImage: "https://i.pinimg.com/originals/28/54/ce/2854ce6a5efda39b79d43f13d16107be.jpg"
+    },
+    {
+    albumName: 'Cough Drop Dark Side',
+    releaseDate: 'October 2018',
+    songList: ['Ludens for Everyone', 'Ricola', 'Halls are for Sissies', 'Bring on the Robitussin', 'Mutiny of Mucinex'],
+    albumImage: "https://scene360.com/wp-content/uploads/2014/10/computergraphics-album-covers-2014-08.jpg"
+    },
+    {
+    albumName: 'Not Dead Yet',
+    releaseDate: 'May 2008',
+    songList: ['Crazy World', 'Live It Up', 'Yet Another Song', 'Believe It', 'Crackling Voices'],
+    albumImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeChAzwhhEPECztK62NJ0v-f9sDtVdpWmxd8rPMqTzJBDYDYL9Qg"
+    }
+];
+
+const memberSection = document.getElementById('bandMemberSection');
+const timelineSec = document.getElementById('timelineSection');
+
+const albumPrinter = (arr) => {
+    let domString = '';
+    for (let i = 0; i < arr.length; i++) {
+        const thisObject = arr[i];
+        domString +=
+        `        
+        <div class="card albumCard">
+        <div class="row">
+            <div class="col-4">
+            <img src="${thisObject.albumImage}" class="img-thumbnail">
+            </div>
+            <div class="col-8">
+            <div class="card-body">
+                <h5 class="card-title">${thisObject.albumName}</h5>
+                <ol class="card-text">
+                `
+                const songs = thisObject.songList;
+                for (let j = 0; j < songs.length; j++) {
+                    const thisSong = songs[j];
+                    domString += 
+                    `<li>${thisSong}</li>`
+                }
+                domString +=
+                `            </ol>
+                        </div>
+                        </div>
+                    </div>
+                    </div>`
+    }
+    printToDom('albumContainer', domString);
+};
+
+
+
+const discoButtonListener = document.getElementById('discography').addEventListener('click', (e) => {
+        //when i click the button the following should happen:
+
+        //1. the current content should be hidden
+        memberSection.style.display = 'none';
+        timelineSec.style.display = 'none';
+        //2. the album array should print below the photo and about us section
+        albumPrinter(albumArr);
+        //3. if time change the button to display "click to view members and timeline"
+
+        //4. then when the button is clicked again, hide albums and unhide the members and timeline sections.
+    });
 
 
 // *****************************************
@@ -211,7 +294,7 @@ const init = () => {
     if(document.URL.includes('merchandise')){
         productBuilder(SoreThroatProducts);
     } else if(document.URL.includes('bio')){
-      cbandMemberPrinter(bandMemberArr);
+      bandMemberPrinter(bandMemberArr);
     } else if(document.URL.includes('index')) {
         printTourDates(tourDates);
     } else if(document.URL.includes('news')) {
