@@ -267,7 +267,7 @@ const SoreThroatProducts = [
                     const prodArray = prodArrays[i];
                     domString +=`
                     <div class = "col-3 ">
-                    <div class="card border">
+                    <div class="merchcard border">
                     <img src="${prodArray.productImg}" class="card-img-top border" alt="...">
                     <div class="card-body border">
                     <h5 class="card-title border">${prodArray.product}</h5>

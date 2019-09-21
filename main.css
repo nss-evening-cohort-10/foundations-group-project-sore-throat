@@ -272,6 +272,11 @@ Merchandise Page
     
 }
 
+.merchcard{
+    font-family: Roboto;
+    color: #bd14db;
+}
+
 .dropdown-menu{
     border-color: #bd14db;
     background-color:  #ff0078;
