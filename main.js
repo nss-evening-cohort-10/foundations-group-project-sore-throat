@@ -143,7 +143,7 @@ const newsCards = [{
     date: 'June 25, 2019',
     title: 'World Tour Kickoff!',
     info: "Sore Throat kicks off their world tour in Boston with amazing opening act \
-        'The Violient Phlegms'.  Check it out!",
+        'The Violent Phlegms'.  Check it out!",
     link: 'Read More'
 },
 {
@@ -191,15 +191,34 @@ const writeCards = (cardArray) => {
     for (let i = 0; i < cardArray.length; i++) {
         let cards = cardArray[i];
         cardString += `
-            <div id="cardBox" class="col-sm-4">   
-                <div class="card text-white bg-dark mb-3" id="news-card" >
-                    <h5 class="card-title" id="news-card-date">${cards.date}</h5>
-                    <h6 id="news-card-title">${cards.title}</h6>
-                    <p class="card-text" id="news-card-info">${cards.info}</p>
-                    <a href="#" class="btn btn-primary" id="news-card-link">${cards.link}</a>
+        <div class="card-wrapper" id="flip-card">
+          <div id="flip-card-inner" class="card card-rotating text-center">
+
+            <div class="face-front" id="flip-card-front">
+                <div id="cardBox" class="col-sm-4">   
+                    <div class="card text-white bg-dark mb-3" id="news-card" >
+                        <h5 class="card-title" id="news-card-date">${cards.date}</h5>
+                        <h6 id="news-card-title">${cards.title}</h6>
+                        <p class="card-text" id="news-card-info">${cards.info}</p>
+                        <a data-card="card-1" id="news-card-link">${cards.link}</a>
+                    </div>
                 </div>
             </div>
-            `
+            <div class="face-back" id="flip-card-back">
+              
+                <div class="card text-white bg-dark mb-3" id="news-card-2" >
+                    <p id="card-back-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat tenetur odio suscipit non commodi vel
+                        eius veniam maxime?</p>
+                    
+                </div>
+
+              
+            </div>
+    
+          </div>
+        </div>
+        `
+        
     }
     
     printToDomSpecial('news-card-div', cardString)
@@ -219,3 +238,4 @@ const init = () => {
     }
 }
   init();
+
