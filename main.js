@@ -229,45 +229,54 @@ const newsCards = [{
     title: 'World Tour Kickoff!',
     info: "Sore Throat kicks off their world tour in Boston with amazing opening act \
         'The Violent Phlegms'.  Check it out!",
-    link: 'Read More',
+     link: 'Read More',
     story: 'Sore Throat embarks on their 23rd world tour with a rocking debut in Boston. \
-        THe tour will be 9 months and hit all 7 concerts.  Sore Throat is thrilled to be \
+        THe tour will be 9 months and hit all 7 continents.  Sore Throat is thrilled to be \
         performing for their fans all over the world!'
 },
 {
     date: 'May 12, 2019',
     title: 'New album!',
-    info: "Check out our newest album--'Hack up a lung'! We feel it is our best yet!",
+    info: "Check out our newest album--'Hack Up A Lung'! We feel it is our best yet!",
     link: 'Read More',
-    story: ''
+    story: "'We are super stoked about our new album!,' says guitarist Crystal CantBehave.  \
+        'We feel this is our best album yet!' 'Hack Up A Lung' will hit the shelves May 15th. \
+        Check it out!"
 },
 {
     date: 'March 23, 2019',
     title: 'New album coming soon!',
     info: "Sore Throat is in the recording studio as of late wrapping\
           up their next album...", 
-     link: 'Read More'
+    link: 'Read More',
+    story: 'According to violinist Denise Deville the band is wrapping up their recording sessions \
+        for their upcoming album.  "We are super excited about this project!  We don\'t think it \
+        will disappoint!'
 },
 {   
     date: 'February 10, 2019',
     title: 'Sore Throat wins a Grammy!',
     info:  'Sore Throat was thrilled to win their 15th Grammy Award for their last album \
             "Hey! Guess what? Chicken Butt!"...',
-    link: 'Read More'
-
+    link: 'Read More',
+    story: 'Sore Throat wants to give a huge thanks to all of their fans and supporters! \
+        Without you this Grammy would not have been possible.  THANK YOU!!!'
 },
 {
     date: 'December 25, 2018',
     title: 'Happy Holidays!',
     info: 'Sore Throat wants to wish all of our fans a happy holiday season.  You are \
         the best fans in the world!',
-    link: 'Read More'
+    link: 'Read More',
+    story: 'Happy Holidays everyone!  We wish you a peaceful holiday season!'
 },
 {
     date: 'November 10, 2018',
     title: 'New album coming soon!',
     info: 'Sore Throat began working on a new album today. This will be their 23rd album.',
-    link: 'Read More'
+    link: 'Read More',
+    story: 'Sore Throat entered the recording studio today.  Keep your ears posted for more info \
+        coming soon!'
 }];
 
 
@@ -296,8 +305,7 @@ const writeCards = (cardArray) => {
             <div class="face-back" id="flip-card-back">
               
                 <div class="card text-white bg-dark mb-3" id="news-card-2" >
-                    <p id="card-back-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat tenetur odio suscipit non commodi vel
-                        eius veniam maxime?</p>
+                    <p id="card-back-info">${cards.story}</p>
                     
                 </div>
 
