@@ -104,6 +104,8 @@ const addAboutMeListener = () => {
         allAboutMeButtons[i].addEventListener('click', (e) => {
             let target = e.target.divId;
             alert('clicked the about button');
+            // const memberText = document.getElementsByClassName('card-text')
+            // let domString += '';
         });
     };
 };
@@ -454,6 +456,9 @@ const writeCards = (cardArray) => {
 
 //need to add additional page functions into the init function to be called on appropriate pages//
 const init = () => {
+    window.onload = function() {
+        printTourDates(tourDates);
+    };
     if(document.URL.includes('bio')){
       bandMemberPrinter(bandMemberArr);
       discoButtonListener();
