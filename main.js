@@ -72,27 +72,43 @@ const bandMemberArr = [
     memberImg: "https://www.syfy.com/sites/syfy/files/styles/1140x640/public/2019/05/punk_sailor_neptune_-_christina_grande.jpg",
     memberName: 'Denise Deville',
     memberRole: 'Violinist',
-    memberJoinDate: 'January 1999'
+    memberJoinDate: 'January 1999',
+    memberInfo: 'I have been playing the violin ever since I was 3 years old. I am inspired by the classics.'
     },
     {
     memberImg: "https://www.bitchmedia.org/sites/default/files/u1952/01_h.jpg",
     memberName: 'Jasmine Jamhardest',
     memberRole: 'Drummer',
     memberJoinDate: 'January 1999',
+    memberInfo: 'I have been smashing around on things since I was 18 months old.  I first started drumming when I got to middle school.'
     },
     {
     memberImg: "https://52f073a67e89885d8c20-b113946b17b55222ad1df26d6703a42e.ssl.cf2.rackcdn.com/TT-16_alw.jpg",
     memberName: 'Alesha Allgood',
     memberRole: 'Pianist/Vocalist',
-    memberJoinDate: 'January 1999'
+    memberJoinDate: 'January 1999',
+    memberInfo: 'I decided when I was 13 that I would like to try picking up an instrument and fell in love with Piano.'
     },
     {
     memberImg: "https://images.megapixl.com/4095/40951439.jpg",
     memberName: 'Crystal Cantbehave',
     memberRole: 'Guitarist/Vocalist',
-    memberJoinDate: 'January 1999'
+    memberJoinDate: 'January 1999',
+    memberInfo: 'Started playing the guitar in my room after being introduced to Metallica and Nirvana.'
     },
 ]
+
+const addAboutMeListener = () => {
+    const allAboutMeButtons = document.querySelectorAll('.aboutMeBtn');
+    for (let i = 0; i < allAboutMeButtons.length; i++) {
+        allAboutMeButtons[i].addEventListener('click', (e) => {
+            let target = e.target.divId;
+            alert('clicked the about button');
+            // const memberText = document.getElementsByClassName('card-text')
+            // let domString += '';
+        });
+    };
+};
 
 const bandMemberPrinter = (arr) => {
     let domString = '';
@@ -107,13 +123,14 @@ const bandMemberPrinter = (arr) => {
                 <h5 class="card-title">${thisObject.memberName}</h5>
                 <p class="card-text">${thisObject.memberRole}</p>
                 <p class="card-text">${thisObject.memberJoinDate}</p>
-                <a href="#" class="btn btn-secondary">About Me</a>
-            </div>
+                <button type="button" class="btn btn-secondary aboutMeBtn" id="button${i}">About Me</button>
+                </div>
             </div>
         </div>
         `
     }
     printToDom('bandMemberCardHolder', domString);
+    addAboutMeListener();
 };
 
 const albumArr = [
@@ -439,6 +456,9 @@ const writeCards = (cardArray) => {
 
 //need to add additional page functions into the init function to be called on appropriate pages//
 const init = () => {
+    window.onload = function() {
+        printTourDates(tourDates);
+    };
     if(document.URL.includes('bio')){
       bandMemberPrinter(bandMemberArr);
       discoButtonListener();
