@@ -305,12 +305,12 @@ const SoreThroatProducts = [
                 }
             merchPrintToDom('productCardSection', domString)
         };
-    
         
    
-const merchListener = () => {
-document.getElementById('merchProdId').addEventListener('click', (e) =>{
-    const productValue = e.target.value;
+
+    const merchListener = () => {
+    document.getElementById('merchProdId').addEventListener('click', (e) =>{
+        const productValue = e.target.value;
     
     const selectedProducts = [];
     
@@ -325,7 +325,7 @@ document.getElementById('merchProdId').addEventListener('click', (e) =>{
     
     productBuilder(selectedProducts)
 });
-};
+
 
 // *****************************************
 // Newsletter Page
@@ -415,6 +415,11 @@ const printToDomSpecial = (divId, toPrint) => {
     document.getElementById(divId).innerHTML += toPrint;
 }
 
+ const submitButton = () => {
+    document.getElementById('news-submit-button').addEventListener('click', (e) => {
+    alert('You have been added to the mailing list. Not!');
+})
+ }
 const writeCards = (cardArray) => {
     let cardString = '';
     for (let i = 0; i < cardArray.length; i++) {
@@ -467,7 +472,7 @@ const init = () => {
     } else if(document.URL.includes('news')) {
             writeCards(newsCards);
     } else if(document.URL.includes('merchandise')) {
-        merchListener();
+                merchListener();        
     }
 }
   init();
